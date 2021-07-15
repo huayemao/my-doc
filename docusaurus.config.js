@@ -24,11 +24,11 @@ module.exports = {
           label: '技术',
         },
         {
-          to:'docs/projects/index',
+          to:'docs/life/index',
           position: 'left',
-          label: '项目',
+          label: '生活',
         },
-        {to: '/blog', label: '生活', position: 'left'},
+        {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',

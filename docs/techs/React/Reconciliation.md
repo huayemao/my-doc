@@ -11,17 +11,9 @@ sidebar_position: 1
 - `The render phase` 决定什么变化需要应用到例如 DOM 上. 在这个阶段，React 调用 render，然后将结果与之前的 render 进行比较。
 - `The commit phase` 是 React 应用变化的阶段。 (以 React DOM 来说, 这是 React 插入、更新和移除 DOM 节点的阶段)，在这一阶段 React 也会调用 componentDidMount 和 componentDidUpdate 这样的生命周期方法.
 
-<iframe src="https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/"
-        width="100%" height="800" frameborder="0" loading="lazy"
-        allowfullscreen sandbox>
-</iframe>
 
-- https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
-- https://reactjs.org/docs/glossary.html#lifecycle-methods
-- https://reactjs.org/docs/react-component.html#mounting
-- https://reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html
-- https://reactjs.org/docs/strict-mode.html#detecting-unexpected-side-effects
-- https://techdoma.in/react-16-tutorial/what-are-render-phase-and-commit-phase-in-react
+
+![React-lifecycle-methods-diagram](React-lifecycle-methods-diagram.svg)
 
 ## 设计动机
 
@@ -77,7 +69,7 @@ React 会销毁 Counter 组件并且重新装载一个新的组件。
 <div style={{color: 'green', fontWeight: 'bold'}} />
 ```
 
-在这两个元素之间进行转换时，React 知道只需要修改 color 样式，无需修改 fontWeight。
+在这两个元素之间进行转换时，React 知道只需要修改 `color` 样式，无需修改 `fontWeight`。
 
 在处理完当前 DOM 节点之后，React 继续对子节点进行递归
 
@@ -171,3 +163,13 @@ React 并不会意识到应该保留 `<li>Duke</li>` 和 `<li>Villanova</li>`，
 
 该算法不会尝试匹配不同组件类型的子树。如果你发现你在两种不同类型的组件中切换，但输出非常相似的内容，建议把它们改成同一类型。在实践中，我们没有遇到这类问题。
 Key 应该具有稳定，可预测，以及列表内唯一的特质。不稳定的 key（比如通过 Math.random() 生成的）会导致许多组件实例和 DOM 节点被不必要地重新创建，这可能导致性能下降和子组件中的状态丢失。
+
+
+## 参考资料
+
+- https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+- https://reactjs.org/docs/glossary.html#lifecycle-methods
+- https://reactjs.org/docs/react-component.html#mounting
+- https://reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html
+- https://reactjs.org/docs/strict-mode.html#detecting-unexpected-side-effects
+- https://techdoma.in/react-16-tutorial/what-are-render-phase-and-commit-phase-in-react
