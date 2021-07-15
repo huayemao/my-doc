@@ -3,12 +3,12 @@ module.exports = {
   title: '花野猫的文档',
   tagline: 'Dinosaurs are cool',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  baseUrl: '/doc/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'huayemao', // Usually your GitHub org/user name.
+  projectName: 'my-doc', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: '花野猫',
@@ -90,13 +90,13 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/huayemao/my-doc/edit/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/huayemao/my-doc/edit/main/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
