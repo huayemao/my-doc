@@ -10,6 +10,7 @@ module.exports = {
   organizationName: 'huayemao', // Usually your GitHub org/user name.
   projectName: 'my-doc', // Usually your repo name.
   themeConfig: {
+    sidebarCollapsible: false,
     navbar: {
       title: '花野猫',
       logo: {
