@@ -10,7 +10,7 @@ module.exports = {
   organizationName: 'huayemao', // Usually your GitHub org/user name.
   projectName: 'my-doc', // Usually your repo name.
   themeConfig: {
-    sidebarCollapsible: false,
+    // sidebarCollapsible: true,
     navbar: {
       title: '花野猫',
       logo: {
@@ -20,7 +20,7 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'intro',
+          docId: 'index',
           position: 'left',
           label: '技术',
         },
@@ -45,7 +45,7 @@ module.exports = {
           items: [
             {
               label: 'Tutorial',
-              to: '/docs/intro',
+              to: '/docs/index',
             },
           ],
         },
